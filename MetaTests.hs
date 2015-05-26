@@ -1,8 +1,14 @@
 module MetaTests where
 
-mail :: IO ()
-mail = return ()
+import Graphics.ShinyUI (FrameType, FrameElement)
+import Test.Hspec
 
+main :: IO ()
+main = hspec $ do
+ 
+  describe "Validate haqify function" $ do
+    it "just should compile" $ do
+    	let (ShinyUI () (FrameConfiguration Frame elems)) in elems `shouldBe` [Label "One", Button "Ok"]
 
 ----- implementation details
 
@@ -14,14 +20,25 @@ data PlatformSpecificInterfaceWin
 instance PlatformSpecificInterface PlatformSpecificInterfaceWin where
 	refresh = return () 
 
+test :: ShinyUI ()
+test = do
+	label "One"
+	button "Ok"
 
 ----- lib user interface
 
 
-data EventState
+--data EventState
 
-data EventSequence
+--data EventSequence
 
-data EventTransaction
+--data EventTransaction
 
-data EventPrecondition
+--data EventPrecondition
+{-
+window $ do
+	label "Hello world"
+	button "OK"
+	button "Cancel"
+-}
+
