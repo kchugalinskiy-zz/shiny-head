@@ -8,7 +8,7 @@ main = hspec $ do
  
   describe "Validate haqify function" $ do
     it "just should compile" $ do
-    	let (ShinyUI () (FrameConfiguration Frame elems)) in elems `shouldBe` [Label "One", Button "Ok"]
+    	let (ShinyUI () (FrameConfiguration Frame elems)) in elems `shouldBe` [Label "SomeTextLabel", Button "OkButton"]
 
 ----- implementation details
 
@@ -22,8 +22,8 @@ instance PlatformSpecificInterface PlatformSpecificInterfaceWin where
 
 test :: ShinyUI ()
 test = do
-	label "One"
-	button "Ok"
+	label "SomeTextLabel"
+	button "OkButton"
 
 ----- lib user interface
 
