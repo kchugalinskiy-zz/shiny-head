@@ -16,8 +16,9 @@ extra-source-files:  README.md
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Graphics.ShinyUI,
-                       Graphics.Styles
+  exposed-modules:     Graphics.UI.InterfaceDescription,
+                       Graphics.UI.Style,
+                       Graphics.UI.Event
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.7
@@ -25,12 +26,12 @@ library
   default-language:    Haskell2010
   ghc-options: -Wall
 
-test-suite Functionality
+test-suite MetaTests
    ghc-options: -Wall
    -- default-extensions:
    type: exitcode-stdio-1.0
    main-is: MetaTests.hs
    build-depends:       base                 >= 4.7,
                         shiny-ui             >= 0.1,
-                        hspec 
+                        hspec                >= 2.0
    default-language:    Haskell2010

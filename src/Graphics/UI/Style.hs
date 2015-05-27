@@ -1,6 +1,6 @@
-module Graphics.Styles where
+module Graphics.UI.Style where
 
-import Graphics.ShinyUI (Id, Class)
+import Graphics.UI.InterfaceDescription (Id, Class)
 
 -- Usage example: ForId "Id" [Append ForId "Btn" Apply [Background RGB 255 0 0 ]]
 
