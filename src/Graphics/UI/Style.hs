@@ -5,6 +5,8 @@ import Graphics.UI.InterfaceDescription (Id, Class)
 
 -- Usage example: ForId "Id" [Append ForId "Btn" Apply [Background RGB 255 0 0 ]]
 
+type Style = [Selector]
+
 data Selector =
 	ForId Id [Modifier] |
 	ForClass Class [Modifier]
