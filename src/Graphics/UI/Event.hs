@@ -1,5 +1,7 @@
 module Graphics.UI.Event where
 
+import Graphics.UI.InterfaceDescription (Id)
+
 data EventCondition = 
 	EventCondition
 
@@ -28,6 +30,7 @@ data DelayEvent =
 	Delay TimeDelta
 
 data UIEvent =
+	OpenWindow Id |
 	CloseWindow
 
 data MouseEvent =

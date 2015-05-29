@@ -21,6 +21,9 @@ data FrameType =
 	Window
 	deriving (Show, Eq, Ord)
 
+getFrameConfiguration :: InterfaceDescription a -> FrameConfiguration
+getFrameConfiguration (InterfaceDescription _ value) = value
+
 data InterfaceDescription a =
 	InterfaceDescription a FrameConfiguration
 	deriving (Show)
