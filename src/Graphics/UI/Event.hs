@@ -1,6 +1,6 @@
 module Graphics.UI.Event where
 
-import Graphics.UI.InterfaceDescription (Id)
+import Graphics.UI.InterfaceDatatypes (Id)
 
 data EventCondition = 
 	EventCondition

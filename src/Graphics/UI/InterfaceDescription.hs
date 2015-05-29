@@ -1,32 +1,9 @@
 module Graphics.UI.InterfaceDescription where
 
+import Graphics.UI.InterfaceDatatypes
+
 import Control.Monad (ap)
 import Control.Applicative (Applicative(..))
-
-type Id = String
-type Class = String
-
-data FrameElement =
-	Button Class Id |
-	Label Class Id |
-	Compound Class Id FrameConfiguration
-	deriving (Show, Eq)
-
-data FrameConfiguration =
-	FrameConfiguration FrameType [FrameElement]
-	deriving (Show, Eq)
-
-data FrameType =
-	Frame |
-	Window
-	deriving (Show, Eq, Ord)
-
-getFrameConfiguration :: InterfaceDescription a -> FrameConfiguration
-getFrameConfiguration (InterfaceDescription _ value) = value
-
-data InterfaceDescription a =
-	InterfaceDescription a FrameConfiguration
-	deriving (Show)
 
 instance Applicative InterfaceDescription where
 	pure = return
@@ -42,6 +19,9 @@ instance Monad InterfaceDescription where
 
 instance Functor InterfaceDescription where
 	fmap f (InterfaceDescription value config) = InterfaceDescription (f value) config
+
+getFrameConfiguration :: InterfaceDescription a -> FrameConfiguration
+getFrameConfiguration (InterfaceDescription _ value) = value
 
 mergeUI :: InterfaceDescription a -> InterfaceDescription b -> InterfaceDescription b
 mergeUI (InterfaceDescription _ (FrameConfiguration frameType1 frameElems1)) (InterfaceDescription val (FrameConfiguration frameType2 frameElems2)) =

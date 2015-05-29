@@ -20,7 +20,8 @@ library
   exposed-modules:     Graphics.UI.InterfaceDescription,
                        Graphics.UI.Style,
                        Graphics.UI.Event,
-                       Graphics.UI.ShinyUI
+                       Graphics.UI.ShinyUI,
+                       Graphics.UI.InterfaceDatatypes
   -- other-modules:       
   -- other-extensions:    
   default-extensions:  ExistentialQuantification

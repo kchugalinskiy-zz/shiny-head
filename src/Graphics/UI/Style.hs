@@ -1,7 +1,7 @@
 module Graphics.UI.Style where
 
 import Graphics.UI.Event
-import Graphics.UI.InterfaceDescription (Id, Class)
+import Graphics.UI.InterfaceDatatypes (Id, Class)
 
 -- Usage example: ForId "Id" [Append ForId "Btn" Apply [Background RGB 255 0 0 ]]
 
