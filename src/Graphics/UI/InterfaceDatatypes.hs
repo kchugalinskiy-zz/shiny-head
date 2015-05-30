@@ -1,7 +1,7 @@
 module Graphics.UI.InterfaceDatatypes where
 
-type Id = [String]
-type Class = [String]
+type Id = String
+type Class = String
 
 data FrameElement =
 	Button Class Id |
