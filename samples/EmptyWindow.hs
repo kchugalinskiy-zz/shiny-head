@@ -5,8 +5,6 @@ import Graphics.UI.InterfaceDescription
 
 main :: IO ()
 main = do
-	let interface = window "WindowClass" "WindowId" $ do
-			label "Class1" "SomeTextLabel"
-			button "Class2" "OkButton"
+	let interface = window "WindowClass" "WindowId" $ do return ()
 	let style = []
 	execute interface style
